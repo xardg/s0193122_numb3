@@ -1,0 +1,336 @@
+<!DOCTYPE html>  
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Задание 1</title>
+        <style>
+            #header {
+                background-color: #f0f0f0;
+                width: 100%;
+                padding: 10px 0;
+                margin-bottom: 20px;
+            }
+            
+            .header-content {
+                max-width: 960px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: auto 1fr;
+                grid-template-rows: auto auto;
+                gap: 10px;
+                align-items: center;
+                padding: 0 20px;
+            }
+            
+            #logo {
+                grid-row: 1 / 3;
+                padding: 10px;
+                border-radius: 5px;
+                text-align: center;
+            }
+            
+            #logo img {
+                max-width: 80px;
+                height: auto;
+            }
+            
+            #site-name {
+                font-size: 28px;
+                font-weight: bold;
+                text-align: center;
+                grid-column: 2;
+            }
+            
+            #nav {
+                display: flex;
+                justify-content: flex-end;
+                gap: 20px;
+                grid-column: 2;
+            }
+            
+            #nav a {
+                text-decoration: none;
+                color: #333;
+                padding: 5px 10px;
+                border-radius: 3px;
+                transition: background-color 0.3s;
+            }
+            
+            #nav a:hover {
+                background-color: #ddd;
+            }
+            
+            #main-content {
+                max-width: 960px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+            
+            #data-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+            }
+            
+            #data-table th, #data-table td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            
+            #data-table th {
+                background-color: #EACDD2;
+            }
+            
+            #data-table tr:nth-child(even) {
+                background-color: #EACDD2;
+            }
+            
+            #data-table tr:nth-child(odd) {
+                background-color: #ffffff;
+            }
+            
+            #footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 15px 0;
+                width: 100%;
+                margin-top: 20px;
+            }
+        </style>
+    </head>    
+    <body>
+        <header id="header">
+            <div class="header-content">
+                <div id="logo">
+                    <img src="cat2.jpg" alt="Логотип">
+                </div>
+                <nav id="nav">
+                    <a href="#links">Ссылки</a>
+                    <a href="#table">Таблица</a>
+                    <a href="#form">Форма</a>
+                </nav>
+                <div id="site-name">Сайт задания</div>
+            </div>
+        </header>
+        
+        <main id="main-content">
+            <h1>Задание 1</h1>
+            
+            <h2 id="table">Таблица с товарами</h2>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Категория</th>
+                        <th>Товар</th>
+                        <th>Цена</th>
+                        <th>Количество</th>
+                        <th>Сумма</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Периферия</td>
+                        <td>Мышь</td>
+                        <td>1500 руб.</td>
+                        <td>2 шт.</td>
+                        <td>3000 руб.</td>
+                    </tr>
+                    <tr>
+                        <td>Клавиатура</td>
+                        <td>2500 руб.</td>
+                        <td>1 шт.</td>
+                        <td>2500 руб.</td>
+                    </tr>
+                    <tr>
+                        <td>Мониторы</td>
+                        <td>24" FullHD</td>
+                        <td>15000 руб.</td>
+                        <td>1 шт.</td>
+                        <td>15000 руб.</td>
+                    </tr>
+                    <tr>
+                        <td>Аудио</td>
+                        <td>Наушники</td>
+                        <td>3000 руб.</td>
+                        <td>3 шт.</td>
+                        <td>9000 руб.</td>
+                    </tr>
+                    <tr>
+                        <td>Аксессуары</td>
+                        <td>Коврик</td>
+                        <td>500 руб.</td>
+                        <td>5 шт.</td>
+                        <td>2500 руб.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><strong>ИТОГО</strong></td>
+                        <td></td>
+                        <td><strong>12 шт.</strong></td>
+                        <td><strong>32000 руб.</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h1 id="links">Список ссылок</h1>
+            <ul>
+                <li>
+                    <a href="https://www.kubsu.ru/ru">Сайт КубГУ 
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.kubsu.ru/">Сайт КубГУ(в протоколе https) </a>
+                </li>
+                <li> 
+                    <a href=https://www.wildberries.ru/><img src="cat.jpg" width="736" height="736"></a></li>
+                <li> 
+                    <a href="inter.html" >Внутренняя старница </a> 
+                </li>
+                <li><a href="#ft">Ссылка на фрагмент </a></li>
+                <li>
+                    <a href="https://www.wildberries.ru/catalog/0/search.aspx?page=1&sort=popular&search=%D0%BC%D0%B8%D0%BB%D1%8B%D0%B9+%D0%BA%D0%BE%D0%B2%D1%80%D0%B8%D0%BA&xsubject=742">Ссылка с тремя параметрами в URL </a>
+                </li>
+                <li> 
+                    <a href="index.html?id=0193122" >Ссылка с параметром id </a> 
+                </li>
+                <li><a href="inter.html">Oтносительная ссылка на страницу в текущем каталоге </a></li>
+                <li> 
+                    <a href="about/index.html">Oтносительная ссылка на страницу в каталоге about </a>
+                </li>
+                <li>
+                    <a href = "about/index.html">Относительная на страницу в каталоге уровнем выше текущего</a>
+                </li>
+                <li> 
+                    <a href="about/index.html">Относительная на страницу в каталоге двумя уровнями выше</a>
+                </li>
+                <li><p>Контекстная ссылка <br/>Wildberries — российский <a href = "https://ru.wikipedia.org/wiki/Маркетплейс">маркетплейс</a>.
+                Основан в 2004 году <br/> <a href = "https://ru.wikipedia.org/wiki/Бакальчук,_Владислав_Сергеевич">Владиславом Бакальчук</a> и <a href = "https://ru.wikipedia.org/wiki/Ким,_Татьяна_Владимировна">Татьяной Бакальчук</a> . 
+                    </p></li>
+                <li> 
+                    <a href=https://ru.wikipedia.org/wiki/Wildberries#:~:text=Wildberries%C2%A0(%D0%92%D0%B0%CC%81%D0%B9%D0%BB%D0%B4%D0%B1%D0%B5%D1%80%D1%80%D0%B8%D0%B7,20%5D.">Ссылка на выделенный фрагмент со стороннего сайта </a>
+                </li>
+                <li>
+                    <img src="circle.png" width="1000" height="666" usemap="#map" alt="фигуры">
+                        <map name="map"> 
+                        <area shape="rect" alt="прямоугольник" coords="65,155,445,500" href="https://www.wildberries.ru/catalog/58062711/detail.aspx">
+                        <area shape="circle" alt="круг" coords="770,335,165" href="https://www.wildberries.ru/catalog/364763637/detail.aspx">
+                        </map>
+                </li>
+                <li>
+                    <a href="">Ссылка с пустым href </a>
+                </li>
+                <li>
+                    <a>Ссылка без href </a>
+                </li>
+                <li>
+                    <a href="/s0195855.github.io/index.html" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a>
+                </li>
+                <li>
+                    <!--noindex--><a href="/s0195855.github.io/index.html" rel="nofollow">Ссылка, запрещенная для индексации поисковиками </a><!--/noindex-->
+                </li>
+                <li>
+                    Нумерованный список товаров 
+                <ol>
+                    <li> 
+                        <a href="https://www.wildberries.ru/catalog/155604983/detail.aspx">Комьютерная мышь</a>
+                    </li>
+                    <li>
+                         <a href="https://www.wildberries.ru/catalog/394514553/detail.aspx">Колесо для хомяка</a>
+                    </li>
+                   <li>
+                        <a href="https://www.wildberries.ru/catalog/312024771/detail.aspx">Антистресс игрушка</a>
+                   </li>
+                   <li> 
+                        <a href="https://www.wildberries.ru/catalog/297621447/detail.aspx">Таба лапка</a>
+                   </li>
+                </ol>
+              </li> 
+              <li> 
+                <a href="ftp://user:password@ftp.server.com/file.txt"> Cсылкa на файл на сервере FTP с авторизацией</a>
+              </li>
+
+            </ul>
+            
+            <br/><h1 id="form"> Оформление заказа</h1>
+            <form action="/" method="POST">
+                <label>
+                    Фамилия имя отчество покупателя:<br />
+                    <input name="LNF"
+                      value="ФИО" />
+                  </label><br/><br/>
+
+                  <div id="ft"> </div>
+                  <label>
+                    Номер телефона покупателя:<br />
+                    <input name="tellephone"
+                      type="tel"
+                      placeholder="+7" />
+                  </label><br /><br/>
+
+                  <label> 
+                    Электронная почта покупателя:<br/>
+                    <input name="email"
+                    type="email" 
+                    id="email"><br/><br/>
+                  </label>
+
+                  <label>
+                    Введите свою дату рождения:<br />
+                    <input name="date"
+                      value=""
+                      type="date" />
+                  </label><br />
+                  <br/>
+
+                  Выберите пол:<br />
+                  <label><input type="radio" 
+                    checked="checked"
+                    name="human" value="Male"> Мужчина
+                </label>
+                
+                  <label><input type="radio" 
+                    checked="checked"
+                    name="human" value="Female" /> Женщина
+                </label><br /><br />
+
+                <label>
+                    Выберите любимый язык программирования:
+                    <br />
+                    <select name="pr"
+                      multiple="multiple">
+                      <option value="1" selected="selected">Pascal</option>
+                      <option value="2" >C</option>
+                      <option value="3" >C++</option>
+                      <option value="4" >JavaScript</option>
+                      <option value="5" >PHP</option>
+                      <option value="6" >Python</option>
+                      <option value="7" >Java</option>
+                      <option value="8" >Haskel</option>
+                      <option value="9" >Clojure</option>
+                      <option value="10" >Prolog</option>
+                      <option value="11" >Scala</option>
+                    </select>
+                  </label><br /><br />
+
+                  <label>
+                    Расскажите о себе:<br />
+                    <textarea name="Biography"> </textarea>
+                  </label><br /><br />
+
+                  <label><input type="checkbox" 
+                    checked="checked"
+                    name="contract" />
+                    С условиями ознакомлен(а)
+                </label><br /><br />
+            
+                <input type="submit" value="Сохранить" />
+            </form>
+        </main>
+        
+        <footer id="footer">
+            <p>(c) Рыбалко Евгения</p>
+        </footer>
+    </body>
+</html>
